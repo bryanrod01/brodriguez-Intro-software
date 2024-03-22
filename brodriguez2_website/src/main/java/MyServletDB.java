@@ -26,7 +26,7 @@ public class MyServletDB extends HttpServlet {
 
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.setContentType("text/html;charset=UTF-8");
-      response.getWriter().println("-------- MySQL JDBC Connection Testing ------------<br>");
+      response.getWriter().println("-------- MySQL ------------<br>");
       try {
          Class.forName("com.mysql.cj.jdbc.Driver");// ("com.mysql.jdbc.Driver");
       } catch (ClassNotFoundException e) {
@@ -34,7 +34,7 @@ public class MyServletDB extends HttpServlet {
          e.printStackTrace();
          return;
       }
-      response.getWriter().println("MySQL JDBC Driver Registered!<br>");
+ 
       connection = null;
       try {
          connection = DriverManager.getConnection(url, user, password);
@@ -44,13 +44,13 @@ public class MyServletDB extends HttpServlet {
          return;
       }
       if (connection != null) {
-         response.getWriter().println("You made it, take control your database now!<br>");
+    
       }
       else {
          System.out.println("Failed to make connection!");
       }
       try {
-         String selectSQL = "SELECT * FROM myTable";// WHERE MYUSER LIKE ?";
+        
          // String theUserName = "user%";
          response.getWriter().println(selectSQL + "<br>");
          response.getWriter().println("------------------------------------------<br>");
