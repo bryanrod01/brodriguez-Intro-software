@@ -32,21 +32,23 @@ footer {
 
 <body>
 <header>
-<h1> Search Data (JSP) </h1>
+<h1> Insert Data </h1>
 </header>
 
 <nav>
-<a href="/brodriguez2_website/simpleFormInsert.html">Click to Insert Data Here</a> <br>
+<a href="/brodriguez2_website/simpleFormSearch.html">Click to Search Data</a> <br>
 </nav>
 
 <section>
 	<h1>User Input</h1>
 	
-	<form action="simpleFormSearchJSP.jsp" method="POST">
+	<form action="SimpleFormInsert" method="POST">
 	
-		User Name: <input type="text" name="keyword"> <br />
+		User Name: <input type="text" name="userName"> <br />
+		Email: <input type="text" name="email"> <br />
+		Phone: <input type="text" name="phone"> <br />
 		
-		<input type="submit" value="Search" />
+		<input type="submit" value="Submit" />
 	</form>
 
 </section>
